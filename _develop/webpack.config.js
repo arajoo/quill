@@ -48,8 +48,9 @@ const jsRules = {
                   'last 2 Safari major versions',
                   'last 2 Edge major versions',
                   'last 2 iOS major versions',
-                  'last 2 ChromeAndroid major versions',
+                  'last 2 ChromeAndroid major versions'
                 ],
+                ie: 11
               },
             },
           ],
@@ -86,9 +87,10 @@ const tsRules = {
       options: {
         compilerOptions: {
           declaration: false,
-          module: 'es6',
+          module: 'esnext',
           sourceMap: true,
-          target: 'es6',
+          target: 'es5',
+          lib: ["es2017", "dom"]
         },
         transpileOnly: true,
       },
